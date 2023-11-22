@@ -1,0 +1,14 @@
+<h1>Nouveaux restaurants</h1>
+
+<%= simple_form_for(@restaurant) do |f| %>
+  <div class ="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :phone_number %>
+    <%= f.select :category, collection: Restaurant::CATEGORYS %>
+  </div>
+
+    <div class="form-actions">
+      <%= f.button :submit %>
+    </div>
+  <% end %>
